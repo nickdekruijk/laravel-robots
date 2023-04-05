@@ -4,6 +4,11 @@ namespace NickDeKruijk\LaravelRobots;
 
 class Robots
 {
+    /**
+     * Return a robots.txt file based on the current environment.
+     *
+     * @return void
+     */
     public function show()
     {
         $robots = config('robots.defaults');
