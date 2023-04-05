@@ -1,0 +1,27 @@
+{
+    "name": "nickdekruijk/laravel-robots",
+    "description": "Dynamic robots.txt files for Laravel projects",
+    "license": "MIT",
+    "keywords": ["php", "laravel", "robots.txt", "seo", "crawler", "spider", "robot"],
+    "homepage": "http://www.nickdekruijk.nl/packages/laravel-robots",
+    "authors": [{
+        "name": "Nick de Kruijk",
+        "email": "git@nickdekruijk.nl"
+    }],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=8.1"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "NickDeKruijk\\LaravelRobots\\ServiceProvider"
+            ]
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "NickDeKruijk\\LaravelRobots\\": "src/"
+        }
+    }
+}
