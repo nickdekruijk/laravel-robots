@@ -11,13 +11,13 @@ class Robots
      */
     public function show()
     {
-        $robots = config('robots.defaults');
+        $defaults = config('robots.defaults');
         $env = config('app.env');
-        if (isset($robots[$env])) {
-            $robots = $robots[$env];
+        if (isset($defaults[$env])) {
+            $robots = $defaults[$env];
         } else {
-            $robots = $robots[null];
+            $robots = $defaults[null];
         }
-        return response(implode("\n", $robots), 200)->header('Content-Type', 'text/plain');
+        return response($robots, 200)->header('Content-Type', 'text/plain');
     }
 }
